@@ -1,0 +1,1 @@
+{'status': 400, 'data': '', 'errors': [{'code': '01200001', 'message': 'Recovery Point Server with name [10.57.50.74] already exists.', 'detailMessage': ''}]}
