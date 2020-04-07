@@ -1,5 +1,6 @@
 [
   "test_pytest.py::test_create_rps[10.57.50.74-8014-https-administrator-cnbjrdqa1@-5bf8e2bf-a1ad-4d17-92ef-4bdc6cd7db9d-dd820c17-d3bd-45c1-922a-cd4ec27ec3b9-400-01200001]",
   "test_pytest.py::test_create_rps[10.57.50.10-804-https-administrator-cnbjrdqa1@-5bf8e2bf-a1ad-4d17-92ef-4bdc6cd7db9d-dd820c17-d3bd-45c1-922a-cd4ec27ec3b9-400-00900008]",
-  "test_pytest.py::test_create_lbs[10.57.50.82-8014-https-root-cnbjrdqa1@-5bf8e2bf-a1ad-4d17-92ef-4bdc6cd7db9d-dd820c17-d3bd-45c1-922a-cd4ec27ec3b9-201-None]"
+  "test_pytest.py::test_create_lbs[10.57.50.82-8014-https-root-cnbjrdqa1@-5bf8e2bf-a1ad-4d17-92ef-4bdc6cd7db9d-dd820c17-d3bd-45c1-922a-cd4ec27ec3b9-201-None]",
+  "test_pytest.py::test_connect_windows[10.57.50.78-machine-administrator-cnbjrdqa1@-dd820c17-d3bd-45c1-922a-cd4ec27ec3b9-200-None]"
 ]

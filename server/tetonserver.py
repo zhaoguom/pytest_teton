@@ -51,3 +51,12 @@ class TetonServer:
             return response.json()
         print(response.json())
         self.check_response_error(response, status, error)
+
+    def connect_windows(self, source_name, source_type, username, password, site_id, status=200, error=None):
+        data = convert_to_json(source_name=source_name, source_type=source_type, username=username, password=password, site_id=site_id)
+        response = requests.post("https://tetonapi.arcserve.com:8443/api/sources/windows/connect", json=data,
+                                 headers={"Content-Type": "application/json", "Authorization": "Bearer " + self.token})
+        if response.status_code == 200:
+            return response.json()
+        print(response.json())
+        self.check_response_error(response, status, error)
