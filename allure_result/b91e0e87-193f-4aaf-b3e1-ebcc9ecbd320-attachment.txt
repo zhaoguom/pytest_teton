@@ -1,1 +1,0 @@
-{'status': 403, 'data': '', 'errors': [{'code': '00100101', 'message': 'The current user does not have permissions to manage the resource.', 'detailMessage': ''}]}

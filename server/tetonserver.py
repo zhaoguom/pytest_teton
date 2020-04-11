@@ -41,22 +41,22 @@ class TetonServer:
         print(response.json())
         self.check_response_error(response, status, error)
 
-    def create_lbs(self, server_name, server_port, server_protocol, server_username, server_password, organization_id, site_id, status=201, error=None):
-        data = convert_to_json(server_name=server_name, server_port=server_port, server_protocol=server_protocol, server_username=server_username,
-                               server_password=server_password, organization_id=organization_id, site_id=site_id)
+    def connect_lbs(self, source_name, username, password, site_id, protocol, port, status=200, error=None):
+        data = convert_to_json(source_name=source_name, username=username, password=password, site_id=site_id,
+                               protocol=protocol, port=port)
 
-        response = requests.post("https://tetonapi.arcserve.com:8443/api/linuxbackupservers", json=data,
+        response = requests.post("https://tetonapi.arcserve.com:8443/api/sources/linuxbackupserver/connect", json=data,
                                  headers={"Content-Type": "application/json", "Authorization": "Bearer " + self.token})
-        if response.status_code == 201:
-            return response.json()
         print(response.json())
+        if response.status_code == 200:
+            return response.json()
         self.check_response_error(response, status, error)
 
     def connect_windows(self, source_name, source_type, username, password, site_id, status=200, error=None):
         data = convert_to_json(source_name=source_name, source_type=source_type, username=username, password=password, site_id=site_id)
         response = requests.post("https://tetonapi.arcserve.com:8443/api/sources/windows/connect", json=data,
                                  headers={"Content-Type": "application/json", "Authorization": "Bearer " + self.token})
+        print(response.json())
         if response.status_code == 200:
             return response.json()
-        print(response.json())
         self.check_response_error(response, status, error)
